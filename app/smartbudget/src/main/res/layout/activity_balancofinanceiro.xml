@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     android:background="#99D6FF">
 
+
+    <!-- Logo + Ícone -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/logoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smart\nBudget"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/kavoon_regular"/>
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/money_savings_save_icon_179034"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+
     <!-- Título -->
     <TextView
         android:id="@+id/tituloBalanco"
@@ -14,11 +45,16 @@
         android:text="Balanço financeiro"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#000"
+        android:textColor="#fff"
+        android:shadowColor="#224081"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="100dp" />
 
     <!-- Subtítulo (mês) -->
     <TextView
@@ -26,8 +62,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mês: março"
+        android:fontFamily="@font/jockeyone_regular"
         android:textSize="16sp"
-        android:textColor="#000"
+        android:textColor="#fff"
         app:layout_constraintTop_toBottomOf="@id/tituloBalanco"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="8dp"

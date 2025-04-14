@@ -7,20 +7,43 @@
     android:layout_height="match_parent"
     android:background="#99D6FF">
 
-    <!-- Título -->
+    <!-- Círculo por trás da logo -->
+    <View
+        android:id="@+id/logoCircle"
+        android:layout_width="320dp"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_elipse"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="130dp" />
+
+    <!-- Texto da logo -->
     <TextView
         android:id="@+id/logoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textSize="75sp"
+        android:textSize="68sp"
+        android:fontFamily="@font/kavoon_regular"
         android:textStyle="bold"
         android:textColor="#224081"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="210dp" />
+        android:layout_marginTop="147dp" />
+
+    <!-- Ícone salário à esquerda do subtítulo -->
+    <ImageView
+        android:id="@+id/logoIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/_3392594_simples_salario_icone"
+        app:layout_constraintTop_toBottomOf="@id/logoText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"/>
 
     <!-- Subtítulo -->
     <TextView
@@ -28,34 +51,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/subtitle_text"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="@font/jockeyone_regular"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/logoText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"/>
-
-    <!-- Círculo com o logo sobreposto -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/logoContainer"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintTop_toBottomOf="@id/logoText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp">
-
-        <!-- Círculo de fundo -->
-        <View
-            android:id="@+id/logoCircle"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/ic_elipse"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <!-- Ícone por cima -->
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="@id/logoIcon"
+        app:layout_constraintBottom_toBottomOf="@id/logoIcon"
+        app:layout_constraintStart_toEndOf="@id/logoIcon"
+        android:layout_marginStart="18dp" />
 
     <!-- Botão -->
     <Button
@@ -63,22 +65,14 @@
         android:layout_width="0dp"
         android:layout_height="90dp"
         android:text="@string/verDespesas"
+        android:fontFamily="@font/jockeyone_regular"
         android:textSize="18sp"
         android:backgroundTint="#708BC5"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/logoContainer"
+        app:layout_constraintTop_toBottomOf="@id/logoIcon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="60dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"/>
-
-    <ImageView
-        android:id="@+id/logoIcon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:src="@drawable/_3392594_simples_salario_icone"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="400dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

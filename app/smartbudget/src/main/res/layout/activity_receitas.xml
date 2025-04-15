@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- Botão de voltar -->
-    <ImageView
+    <Button
         android:id="@+id/voltar"
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -81,15 +81,17 @@
             app:tint="#000" />
 
         <EditText
+            android:id="@+id/meuInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:hint="Filtro"
             android:textColor="#000"
             android:textColorHint="#999"
+            android:hint="Filtro"
             android:inputType="text" />
+
     </LinearLayout>
 
     <!-- Lista de receitas -->

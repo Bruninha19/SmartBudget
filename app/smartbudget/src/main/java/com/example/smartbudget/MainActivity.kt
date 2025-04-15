@@ -14,8 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.hide()
+
         val btnDespesas = findViewById<Button>(R.id.btnDespesas)
         val btnReceitas = findViewById<Button>(R.id.btnReceitas)
+        val btnBalanco = findViewById<Button>(R.id.btnBalanco)
 
         // Navegação para a tela de Despesas
         btnDespesas.setOnClickListener {
@@ -26,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         // Navegação para a tela de Receitas
         btnReceitas.setOnClickListener {
             val intent = Intent(this, ReceitasActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnBalanco.setOnClickListener {
+            val intent = Intent(this, BalancoActivity::class.java)
             startActivity(intent)
         }
     }

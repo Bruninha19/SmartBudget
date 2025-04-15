@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -48,22 +48,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Botão de voltar -->
-    <ImageButton
-        android:id="@+id/imgVoltar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginStart="15dp"
-        android:src="@drawable/voltar"
-        android:background="@android:color/transparent"
-        android:contentDescription="Botão de voltar"
-        android:onClick="VoltarAoClicar"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/receitasList"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
     <!-- Campo de busca -->
@@ -163,7 +147,7 @@
             android:text="+ Adicionar receita"
             android:textColor="#000"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="15dp"
             android:textSize="17sp"/>
 
         <TextView

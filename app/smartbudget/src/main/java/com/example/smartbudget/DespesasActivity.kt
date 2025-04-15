@@ -3,6 +3,8 @@ package com.example.smartbudget
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smartbudget.databinding.ActivityDespesasBinding
 
@@ -14,16 +16,28 @@ class DespesasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        fun VoltarAoClicar(view: View) {
-            // Ação ao clicar, tipo:
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            // ou ir pra outra activity
-        }
+
+        supportActionBar?.hide()
 
         // Inicializa o ViewBinding
         binding = ActivityDespesasBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val linkText: TextView = findViewById<Button>(R.id.adicionarDespesa)
+
+        linkText.setOnClickListener {
+            val intent = Intent(this, AdicionarDespesaActivity::class.java) // Substitua com a Activity de destino
+            startActivity(intent)
+        }
+
+        val linkText2: TextView = findViewById<Button>(R.id.excluirDespesa)
+
+        linkText2.setOnClickListener {
+            val intent = Intent(this, ExcluirDespesaActivity::class.java) // Substitua com a Activity de destino
+            startActivity(intent)
+        }
+
+
 
         // Agora, você pode acessar os componentes da tela usando o binding
         // Exemplo: binding.tvDespesasTitle.text = "Minha Tela de Despesas"

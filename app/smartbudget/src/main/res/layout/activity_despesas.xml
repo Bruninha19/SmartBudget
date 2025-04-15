@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -49,21 +49,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Botão de voltar -->
-    <ImageButton
-        android:id="@+id/imgVoltar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="15dp"
-        android:src="@drawable/voltar"
-        android:contentDescription="Botão de voltar"
-        android:background="@android:color/transparent"
-        android:onClick="VoltarAoClicar"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/despesasList"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Campo de busca -->
     <LinearLayout
@@ -157,15 +142,17 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/adicionarDespesa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+ Adicionar despesa"
             android:textColor="#000"
             android:textStyle="bold"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="15dp"
             android:textSize="17sp"/>
 
         <TextView
+            android:id="@+id/excluirDespesa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="– Excluir despesa"

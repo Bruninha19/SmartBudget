@@ -10,6 +10,8 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_telainicial)
 
+        supportActionBar?.hide()
+
         val btnVerDespesas = findViewById<Button>(R.id.btnCadastrar)
 
         btnVerDespesas.setOnClickListener {

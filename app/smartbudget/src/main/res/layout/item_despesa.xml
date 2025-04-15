@@ -13,8 +13,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/store_solid"
             android:layout_marginEnd="8dp" />
 
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:text="Supermercado"
             android:textColor="#000"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +32,8 @@
             android:layout_height="wrap_content"
             android:text="-R$ 1.800,00"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="17sp"/>
     </LinearLayout>
 
     <!-- Gás -->
@@ -43,8 +45,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/fire_solid"
             android:layout_marginEnd="8dp" />
 
@@ -54,14 +56,16 @@
             android:layout_height="wrap_content"
             android:text="Gás"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-R$ 115,00"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <!-- Luz -->
@@ -73,8 +77,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/lightbulb_solid"
             android:layout_marginEnd="8dp" />
 
@@ -84,14 +88,16 @@
             android:layout_height="wrap_content"
             android:text="Luz"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-R$ 200,00"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="17sp"/>
     </LinearLayout>
 
     <!-- Netflix -->
@@ -103,8 +109,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/tv_solid"
             android:layout_marginEnd="8dp" />
 
@@ -114,14 +120,16 @@
             android:layout_height="wrap_content"
             android:text="Netflix"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-R$ 49,90"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="17sp"/>
     </LinearLayout>
 
     <!-- IPVA -->
@@ -133,8 +141,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/car_solid"
             android:layout_marginEnd="8dp" />
 
@@ -144,14 +152,16 @@
             android:layout_height="wrap_content"
             android:text="IPVA"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-R$ 145,83"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="17sp"/>
     </LinearLayout>
 
     <!-- Plano de saúde -->
@@ -163,8 +173,8 @@
         android:paddingVertical="6dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@drawable/kit_medical_solid"
             android:layout_marginEnd="8dp" />
 
@@ -174,14 +184,16 @@
             android:layout_height="wrap_content"
             android:text="Plano de sáude"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-R$ 500,00"
             android:textColor="#D10000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textSize="17sp"/>
     </LinearLayout>
 
 </LinearLayout>

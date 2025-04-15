@@ -2,7 +2,7 @@ package com.example.smartbudget
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smartbudget.databinding.ActivityDespesasBinding
 
@@ -14,6 +14,12 @@ class DespesasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        fun VoltarAoClicar(view: View) {
+            // Ação ao clicar, tipo:
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            // ou ir pra outra activity
+        }
 
         // Inicializa o ViewBinding
         binding = ActivityDespesasBinding.inflate(layoutInflater)

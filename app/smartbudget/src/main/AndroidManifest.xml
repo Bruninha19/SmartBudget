@@ -27,7 +27,8 @@
 
         <activity android:name=".DespesasActivity" android:exported="true"/>
         <activity android:name=".ReceitasActivity" android:exported="true"/>
-        <activity android:name=".VoltarActivity" android:exported="true"/>
+        <activity android:name=".VoltarDespesasActivity" android:exported="true"/>
+        <activity android:name=".VoltarReceitasActivity" android:exported="true"/>
 
     </application>
 </manifest>

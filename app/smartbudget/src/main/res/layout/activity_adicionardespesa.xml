@@ -66,7 +66,10 @@
             android:id="@+id/inputNomeDespesa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="#999"
+            android:textColor="#000"
             android:hint="Nome da despesa"
+            android:inputType="text"
             android:background="@android:color/transparent"
             android:padding="12dp"/>
     </LinearLayout>
@@ -87,6 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Valor"
+            android:textColorHint="#999"
+            android:textColor="#000"
             android:inputType="numberDecimal"
             android:padding="12dp"
             android:background="@android:color/transparent"

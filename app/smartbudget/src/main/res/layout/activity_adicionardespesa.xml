@@ -16,7 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Logo (Texto) -->
         <TextView
             android:id="@+id/logoText"
             android:layout_width="wrap_content"
@@ -27,7 +26,6 @@
             android:textStyle="bold"
             android:textColor="#FFFFFF" />
 
-        <!-- Ícone à direita da logo -->
         <ImageView
             android:id="@+id/userIcon"
             android:layout_width="56dp"
@@ -35,8 +33,6 @@
             android:src="@drawable/money_savings_save_icon_179034"
             android:layout_marginStart="8dp" />
     </LinearLayout>
-
-
 
     <TextView
         android:id="@+id/tituloAdicionar"
@@ -55,30 +51,48 @@
         android:layout_marginTop="150dp"
         android:layout_marginLeft="24dp"/>
 
-    <EditText
-        android:id="@+id/inputNomeDespesa"
+    <LinearLayout
+        android:id="@+id/layoutNomeDespesa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome da despesa"
-        android:background="@android:drawable/editbox_background"
-        android:padding="12dp"
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:background="#fff"
         app:layout_constraintTop_toBottomOf="@id/tituloAdicionar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="24dp"/>
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/inputValorDespesa"
+        <EditText
+            android:id="@+id/inputNomeDespesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da despesa"
+            android:background="@android:color/transparent"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutValorDespesa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Valor"
-        android:inputType="numberDecimal"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"
-        app:layout_constraintTop_toBottomOf="@id/inputNomeDespesa"
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@id/layoutNomeDespesa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="24dp"/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/inputValorDespesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="0dp"/>
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btnSalvarDespesa"
@@ -86,10 +100,9 @@
         android:layout_height="wrap_content"
         android:text="Salvar"
         android:textColor="#fff"
-        app:layout_constraintTop_toBottomOf="@id/inputValorDespesa"
+        app:layout_constraintTop_toBottomOf="@id/layoutValorDespesa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="#224081"
         android:layout_marginTop="24dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

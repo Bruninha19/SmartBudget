@@ -27,5 +27,7 @@
         <activity android:name=".BalancoActivity" android:exported="true"/>
         <activity android:name=".AdicionarDespesaActivity" android:exported="true"/>
         <activity android:name=".ExcluirDespesaActivity" android:exported="true"/>
+        <activity android:name=".ExcluirReceitaActivity" android:exported="true"/>
+        <activity android:name=".AdicionarReceitaActivity" android:exported="true"/>
     </application>
 </manifest>

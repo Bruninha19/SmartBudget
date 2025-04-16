@@ -142,6 +142,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/adicionarReceita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+ Adicionar receita"
@@ -151,6 +152,7 @@
             android:textSize="17sp"/>
 
         <TextView
+            android:id="@+id/excluirReceita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="– Excluir receita"

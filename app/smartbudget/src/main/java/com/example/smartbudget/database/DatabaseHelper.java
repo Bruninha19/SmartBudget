@@ -1,10 +1,21 @@
 package com.example.smartbudget.database;
 
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
+import com.example.smartbudget.model.Despesa;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+
 
 import com.example.smartbudget.model.Despesa;
 
@@ -81,13 +92,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-//    public List<Despesa> buscarDespesas() {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//
-//        db.execSQL("select * from " + TABLE_DESPESAS);
-//
-//        db.query()
-//
-//        db.close();
-//    }
+// Inserir receita
+    public void inserirReceita(String descricao, double valor, String data) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_DESCRICAO, descricao);
+        values.put(COLUMN_VALOR, valor);
+        values.put(COLUMN_DATA, data);
+
+        long result = db.insert(TABLE_RECEITAS, null, values);
+
+        if (result != -1) {
+            Toast.makeText(context, "Receita salva com sucesso!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(context, "Erro ao salvar receita", Toast.LENGTH_SHORT).show();
+        }
+
+        db.close();
+    }
+
+  /*  public List<Despesa> buscarDespesas(String textoBusca) {
+        List<Despesa> listaDespesas = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM " + TABLE_DESPESAS + " WHERE " + COLUMN_DESCRICAO + " LIKE ?",
+                new String[]{"%" + textoBusca + "%"}
+        );
+
+        if (cursor.moveToFirst()) {
+            do {
+                Despesa despesa = new Despesa();
+                despesa.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID)));
+                despesa.setDescricao(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DESCRICAO)));
+                despesa.setValor(cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_VALOR)));
+                despesa.setData(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATA)));
+
+                listaDespesas.add(despesa);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return listaDespesas;
+    }
+
+*/
+
+
 }

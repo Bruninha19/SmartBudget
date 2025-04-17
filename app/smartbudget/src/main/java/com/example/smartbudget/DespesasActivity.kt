@@ -41,5 +41,7 @@ class DespesasActivity : AppCompatActivity() {
 
         // Agora, você pode acessar os componentes da tela usando o binding
         // Exemplo: binding.tvDespesasTitle.text = "Minha Tela de Despesas"
+
     }
+
 }

@@ -1,10 +1,14 @@
-package com.example.smartbudget;
+package com.example.smartbudget.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
+import com.example.smartbudget.model.Despesa;
+
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -76,4 +80,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.close();
     }
+
+//    public List<Despesa> buscarDespesas() {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        db.execSQL("select * from " + TABLE_DESPESAS);
+//
+//        db.query()
+//
+//        db.close();
+//    }
 }

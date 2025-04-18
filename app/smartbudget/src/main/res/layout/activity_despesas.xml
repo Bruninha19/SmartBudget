@@ -88,7 +88,7 @@
     <LinearLayout
         android:id="@+id/despesasList"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="vertical"
         android:background="#A9CFF5"
         android:padding="16dp"
@@ -98,19 +98,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mês: março"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:fontFamily="@font/judson_regular"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Exemplo de despesas -->
-        <include layout="@layout/item_despesa"
-            android:id="@+id/linha_despesas"/>
 
         <!-- Total -->
         <TextView
@@ -124,7 +111,7 @@
             android:paddingVertical="6dp"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="230dp"
             android:backgroundTintMode="src_atop"
             android:fontFamily="@font/judson_regular"
             android:backgroundTint="#345995" />

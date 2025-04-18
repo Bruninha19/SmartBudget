@@ -1,6 +1,5 @@
 package com.example.smartbudget.database;
 
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,14 +10,6 @@ import android.widget.Toast;
 import com.example.smartbudget.model.Despesa;
 
 import java.util.ArrayList;
-import java.util.List;
-
-
-
-
-
-import com.example.smartbudget.model.Despesa;
-
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -44,7 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.context = context; // usamos para o Toast depois
+        this.context = context;
     }
 
     @Override
@@ -72,7 +63,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // Método para inserir uma despesa
     public void inserirDespesa(String descricao, double valor, String data) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -85,6 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (result != -1) {
             Toast.makeText(context, "Despesa salva com sucesso!", Toast.LENGTH_SHORT).show();
+            atualizarListaDespesas();
         } else {
             Toast.makeText(context, "Erro ao salvar despesa", Toast.LENGTH_SHORT).show();
         }
@@ -92,8 +83,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-// Inserir receita
-    public void inserirReceita(String descricao, double valor, String data) {
+    private void atualizarListaDespesas() {
+        // Aqui você pode chamar um método que busca as despesas e atualiza a UI
+        List<Despesa> listaDespesas = buscarDespesas();  // Método que retorna a lista de despesas
+
+    }
+
+
+        public void inserirReceita(String descricao, double valor, String data) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -112,16 +109,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-  /*  public List<Despesa> buscarDespesas(String textoBusca) {
+
+
+    // ✅ Aqui está o método agora DENTRO da classe DatabaseHelper
+    public List<Despesa> buscarDespesas() {
         List<Despesa> listaDespesas = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.rawQuery(
-                "SELECT * FROM " + TABLE_DESPESAS + " WHERE " + COLUMN_DESCRICAO + " LIKE ?",
-                new String[]{"%" + textoBusca + "%"}
+        Cursor cursor = db.query(
+                TABLE_DESPESAS,
+                new String[]{COLUMN_ID, COLUMN_DESCRICAO, COLUMN_VALOR, COLUMN_DATA},
+                null, null, null, null,
+                COLUMN_DATA + " DESC"
         );
 
-        if (cursor.moveToFirst()) {
+        if (cursor != null && cursor.moveToFirst()) {
             do {
                 Despesa despesa = new Despesa();
                 despesa.setId(cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID)));
@@ -131,15 +133,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 listaDespesas.add(despesa);
             } while (cursor.moveToNext());
+
+            cursor.close();
+
+            // Mensagem de sucesso com Toast
+            Toast.makeText(context, "Busca realizada com sucesso!", Toast.LENGTH_SHORT).show();
+        } else {
+            // Mensagem de erro com Toast
+            Toast.makeText(context, "Nenhuma despesa encontrada!", Toast.LENGTH_SHORT).show();
         }
 
-        cursor.close();
         db.close();
-
         return listaDespesas;
     }
-
-*/
-
 
 }

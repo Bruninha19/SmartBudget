@@ -7,11 +7,14 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smartbudget.databinding.ActivityDespesasBinding
+import com.example.smartbudget.database.DatabaseHelper
 
 class DespesasActivity : AppCompatActivity() {
 
+
     // Variável para o ViewBinding
     private lateinit var binding: ActivityDespesasBinding
+    private lateinit var despesaHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,11 @@ class DespesasActivity : AppCompatActivity() {
             val intent = Intent(this, ExcluirDespesaActivity::class.java) // Substitua com a Activity de destino
             startActivity(intent)
         }
+
+        despesaHelper = DatabaseHelper(this)
+        despesaHelper.buscarDespesas()
+
+
 
 
 
